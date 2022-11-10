@@ -46,7 +46,7 @@ public class main {
                 System.out.println("Feel free to use any of the following commands:\n"
                         + "\t- R: Run the application.\n"
                         + "\t- C: Close the current truck order and return to this menu.\n"
-                        + "\t- V: View current truck order (Use -e flag to automatically export results).\n"
+                        + "\t- V: View current truck order.\n"
                         + "\t- E: Export the current truck order to a text file.\n"
                         + "\t- Q: Quit the application.");
                 String continueWhenReady = scanner.next();
