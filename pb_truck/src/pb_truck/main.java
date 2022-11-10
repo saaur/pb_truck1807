@@ -81,7 +81,7 @@ public class main {
                 	view(connect, true);
                 } else if(continueWhenReady.equalsIgnoreCase("Q")) {
                 	isDone = true;
-                } else System.out.println("Please enter a valid command.");
+                } else System.out.println("Please enter a valid command.\n");
             }
             System.out.println("Program safely exited.");
             System.exit(0);
@@ -96,7 +96,6 @@ public class main {
     }
 
     public static void view(Connection connect, boolean export) throws SQLException {
-    	Scanner scanner = new Scanner(System.in);
     	if(!export) {
         	ResultSet rs = connect.createStatement().executeQuery("select * from data");
         	while(rs.next()) {
@@ -110,7 +109,7 @@ public class main {
         		file.write(rs.getString("ITEM_NAME").toUpperCase() + ", QUANTITY:" + rs.getString("QUANTITY") + "\n");
         	}
         	file.close();
-        	System.out.println("Output has successfully been exported to:\n\t" + System.getProperty("user.dir") + "/output.txt");
+        	System.out.println("\nOutput has successfully been exported to:\n\t" + System.getProperty("user.dir") + "/output.txt\n");
     		} catch(IOException e) { }
     	}
     }
